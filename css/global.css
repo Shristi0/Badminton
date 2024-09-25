@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: clamp(14px, 14px + 2 * (100vw - 320px) / 1600, 16px);
+  background-color: #fff;
+  color: var(--grey-dark);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+.h1 {
+  font-size: clamp(29px, 29px + 10 * (100vw - 320px) / 1600, 32px);
+  font-family: "Montserrat";
+  line-height: 38.4px;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: clamp(26px, 26px + 6 * (100vw - 320px) / 1600, 29px);
+  line-height: 34.8px;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(24px, 26px + 2 * (100vw - 320px) / 1600, 26px);
+  line-height: 31.2px;
+  font-family: "source-serif-pro";
+  font-weight: 600;
+}
+
+.h4,
+h4 {
+  font-size: clamp(20px, 23px + 2 * (100vw - 320px) / 1600, 23px);
+  line-height: 27.6px;
+  font-weight: 600;
+}
+
+.h5,
+h5 {
+  font-size: clamp(18px, 18px + 2 * (100vw - 320px) / 1600, 20px);
+  line-height: 24px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: clamp(16px, 16px + 2 * (100vw - 320px) / 1600, 18px);
+  line-height: 21.8px;
+  font-weight: 400;
+}
+
+p {
+  font-size: clamp(14px, 14px + 2 * (100vw - 320px) / 1600, 16px);
+}
+
+.para1 {
+  font-size: clamp(14px, 14px + 2 * (100vw - 320px) / 1600, 16px);
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.para2 {
+  font-size: clamp(13px, 13px + 2 * (100vw - 320px) / 1600, 14px);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.para3 {
+  font-size: clamp(12px, 12px + 2 * (100vw - 320px) / 1600, 13px);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.subtitle1 {
+  font-size: clamp(14px, 14px + 2 * (100vw - 320px) / 1600, 16px);
+  line-height: 19.2px;
+  font-weight: 500;
+}
+
+.subtitle2 {
+  font-size: clamp(12px, 12px + 2 * (100vw - 320px) / 1600, 14px);
+  line-height: 19.2px;
+  font-weight: 500;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semiBold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.pb-92 {
+  padding-bottom: 92px;
+}
+
+.py-60 {
+  padding: 60px 0px;
+}
+
+.py-80 {
+  padding: 80px 0px;
+}/*# sourceMappingURL=global.css.map */

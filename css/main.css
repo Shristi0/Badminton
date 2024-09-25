@@ -1,0 +1,8 @@
+@import url("/css/packages/font.css");
+@import url("/css/packages/boostrap.min.css");
+@import url("/css/packages/owl.carousel.min.css");
+@import url("/css/packages/owl.theme.default.min.css");
+@import url("./variable.css");
+@import url("./global.css");
+@import url("./component.css");
+@import url("./style.css");
