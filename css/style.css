@@ -1,7 +1,53 @@
-.gallery img {
-  width: auto;
+.single-banner-slide {
+  height: 72vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+.single-banner-slide .banner-text {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+  padding: 16px 32px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  gap: 8px;
+}
+.single-banner-slide span {
+  color: #fff;
+  font-weight: 600;
+}
+.single-banner-slide h1 {
+  color: #fff;
+  margin: 0;
+  display: flex;
+}
+.single-banner-slide img {
+  height: 35px;
+  width: 35px !important;
+}
+.single-banner-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  width: 100%;
   height: 100%;
-  border-radius: 24px;
+}
+.single-banner-slide .owl-dots {
+  display: none !important;
 }
 
 .event-content img {
@@ -25,8 +71,7 @@
   height: 100%;
   width: 100%;
 }
-.event-list_title {
-  font-size: 16px;
+.event-list p {
   line-height: 22px;
 }
 .event-list_border {
@@ -34,4 +79,22 @@
   height: 2px;
   margin: 10px 0px;
   background-color: var(--grey-light);
+}
+
+.gallery img {
+  width: auto;
+  height: 100%;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  color: #fff;
+}
+
+.performer {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: url("/assets/image/bgImage.jpg") no-repeat center/cover;
 }/*# sourceMappingURL=style.css.map */

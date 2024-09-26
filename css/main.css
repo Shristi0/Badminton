@@ -1,7 +1,9 @@
-@import url("/css/packages/font.css");
 @import url("/css/packages/boostrap.min.css");
-@import url("/css/packages/owl.carousel.min.css");
-@import url("/css/packages/owl.theme.default.min.css");
+/* @import url("/css/packages/owl.carousel.min.css");
+@import url("/css/packages/owl.theme.default.min.css"); */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css");
+@import url("/css/packages/font.css");
 @import url("./variable.css");
 @import url("./global.css");
 @import url("./component.css");

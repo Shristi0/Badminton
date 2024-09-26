@@ -26,6 +26,8 @@
   --grey-light: #c2c2c2;
   --grey-lighter: #ebebeb;
   --grey-lightest: #f5f5f5;
+  --white: #fff;
+  --black: #000;
 }
 .bg-primary-900 {
   background-color: var(--primary-900);
@@ -107,6 +109,18 @@
 }
 .bg-grey-lightest {
   background-color: var(--grey-lightest);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.bg-black {
+  background-color: var(--black);
+}
+.text-white {
+  color: var(--white);
+}
+.text-black {
+  color: var(--black);
 }
 .text-primary-900 {
   color: var(--primary-900);

@@ -39,35 +39,71 @@
   gap: 8px;
   margin-bottom: 32px;
 }
-
-.subHeading-badminton {
+.heading-badminton h2 {
+  text-align: center;
+}
+.heading-badminton .subHeading-badminton {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
 }
-.subHeading-badminton .h5 {
+.heading-badminton .subHeading-badminton .h5 {
   color: #f74f1e;
 }
 
-.marquee .marquee-notice {
+.marquee-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+.marquee-wrapper .marquee {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.marquee-wrapper .marquee .marquee-notice {
   background-color: #dd1d3e;
-  padding: 8px 24px;
+  padding: 8px 16px;
   color: #f7fafc;
   font-size: 16px;
   font-weight: 600;
-  line-height: 19.1px;
+  white-space: nowrap;
 }
-.marquee .marquee-content {
-  color: var(--gray-700, #2d3748);
-  text-align: center;
-  font-family: var(--family-title, Montserrat);
-  font-size: var(--Text-Size-subtitle-2, 14px);
-  font-style: normal;
-  font-weight: var(--Weight-500, 500);
-  line-height: 16px; /* 114.286% */
+.marquee-wrapper .marquee .marquee-content {
+  width: 100%;
+}
+.marquee-wrapper .marquee .marquee-content marquee {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  padding: 8px 0px;
 }
 
+@media (max-width: 768px) {
+  .marquee-wrapper .marquee .marquee-notice {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .marquee-wrapper .marquee .marquee-content marquee {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .marquee-wrapper .marquee {
+    align-items: flex-start;
+  }
+  .marquee-wrapper .marquee .marquee-notice {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .marquee-wrapper .marquee .marquee-content marquee {
+    font-size: 10px;
+  }
+}
 .footer {
   padding: 80px 0px;
   background-color: #f0f8ff;
@@ -99,6 +135,19 @@
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.25);
+}
+
+.overlay-blue {
+  position: relative;
+}
+.overlay-blue::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(4, 55, 98, 0.7) 0%, rgba(4, 55, 98, 0.7) 100%);
 }
 
 .bannerWrapper {
