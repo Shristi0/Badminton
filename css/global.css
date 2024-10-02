@@ -108,24 +108,32 @@ p {
   font-weight: 300;
 }
 
-.fw-regular {
+.fw-400 {
   font-weight: 400;
 }
 
-.fw-medium {
+.fw-500 {
   font-weight: 500;
 }
 
-.fw-semiBold {
+.fw-600 {
   font-weight: 600;
 }
 
-.fw-bold {
+.fw-700 {
   font-weight: 700;
 }
 
 .fw-800 {
   font-weight: 800;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.pb-32 {
+  padding-bottom: 32px;
 }
 
 .pb-92 {

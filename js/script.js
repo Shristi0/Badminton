@@ -10,22 +10,12 @@ $(document).ready(function () {
   });
 });
 
-$(".gallery-slider").owlCarousel({
-  center: true,
-  items: 2,
-  loop: false,
-  margin: 10,
-  responsive: {
-    600: {
-      items: 4,
-    },
-  },
-});
+
 //Owl Carousel
 $(".all-banner-slide").owlCarousel({
   items: 1,
   smartSpeed: 1000,
-  autoplay: false,
+  autoplay: true,
   lazyLoad: true,
   dots: false,
   loop: true,
@@ -34,14 +24,13 @@ $(".all-banner-slide").owlCarousel({
   infinity: true,
   autoplayTimeout: 3000,
 });
-$(".owl-carousel").owlCarousel({
+$(".gallery-slider").owlCarousel({
   loop: true,
   margin: 10,
   autoplay: true,
   nav: false,
   dots: false,
   infinity: true,
-  autoplayTimeout: 3000,
   responsive: {
     0: {
       items: 1.5,
@@ -52,3 +41,76 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+$('.partner-slider').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:false,
+  dots:false,
+  autoplay:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
+})
+$('.performer-slider').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  dots:false,
+  autoplay:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
+})
+$('.news-slider').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  dots:false,
+  autoplay:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
+  }
+})
+$('.testimonial-slider').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  dots:false,
+  autoplay:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
+      },
+      1000:{
+          items:1
+      }
+  }
+})

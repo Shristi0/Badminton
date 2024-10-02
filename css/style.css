@@ -19,7 +19,7 @@
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  bottom: 10px;
+  bottom: 14px;
   display: flex;
   gap: 8px;
 }
@@ -67,6 +67,11 @@
   color: white;
   font-size: x-large;
 }
+@media all and (max-width: 920px) {
+  .banner-area .owl-carousel .owl-nav button.owl-next {
+    display: none;
+  }
+}
 .banner-area .owl-carousel .owl-nav button.owl-prev,
 .banner-area .owl-carousel button.owl-dot {
   position: absolute;
@@ -83,6 +88,12 @@
   color: white;
   font-size: x-large;
 }
+@media all and (max-width: 920px) {
+  .banner-area .owl-carousel .owl-nav button.owl-prev,
+  .banner-area .owl-carousel button.owl-dot {
+    display: none;
+  }
+}
 .banner-area .owl-prev span {
   padding-bottom: 2px;
   padding-right: 2px;
@@ -92,8 +103,135 @@
   padding-right: 2px;
 }
 
+.performer {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: url("/assets/image/bgImage.jpg") no-repeat center/cover;
+}
+.performer .nav {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px;
+}
+.performer .nav-pills .nav-link.active,
+.performer .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #f74f1e;
+}
+.performer .nav-link {
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--grey-dark);
+  font-weight: 500;
+}
+.performer-card img {
+  height: 280px;
+  border-radius: 16px;
+}
+.performer-card_info {
+  margin-top: 20px;
+  gap: 12px;
+}
+.performer-card_info img {
+  height: 16px;
+  width: 16px !important;
+}
+
+.news {
+  background-color: #f0f8ff;
+}
+.news-card {
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0px 13px 39px 0px rgba(0, 0, 0, 0.03);
+}
+.news-card img {
+  border-radius: 9px 9px 0px 0px;
+}
+.news-card__content {
+  padding: 20px;
+}
+.news-card__content p {
+  font-size: 14px;
+}
+.news-readMore {
+  display: inline-block;
+  position: relative;
+}
+.news-readMore:hover .news-readMore_arrow {
+  opacity: 1;
+  right: -46px;
+}
+.news-readMore_a {
+  position: relative;
+  padding-right: 20px;
+  top: -1px;
+  transition: all 0.3s ease;
+}
+.news-readMore_arrow {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, right 0.3s ease;
+  height: 14px;
+  width: 14px;
+  color: #333;
+}
+
+.event-content {
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+}
 .event-content img {
+  width: 100%;
+  height: 100%;
   border-radius: 19px;
+  transition: transform 0.3s ease;
+}
+.event .card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.event .card-image .overlay::before {
+  position: relative;
+}
+@media all and (min-width: 768px) {
+  .event-content:hover img {
+    transform: scale(1.1);
+  }
+  .event-content:hover .card-title {
+    transform: translateY(-100%);
+  }
+  .event-content:hover .card-description {
+    opacity: 1;
+    bottom: 24px;
+  }
+  .event .card-title {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 5px 0px;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  .event .card-description {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 0px 12px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
 }
 .event-list {
   border-radius: 16px;
@@ -134,70 +272,97 @@
   color: #fff;
 }
 
-.performer {
+.partner-img {
+  height: 50px;
+  width: 100%;
+}
+.partner-img img {
   height: 100%;
   width: 100%;
-  z-index: 1;
-  background: url("/assets/image/bgImage.jpg") no-repeat center/cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-/* Basic card container styling */
-.event-content {
-  overflow: hidden;
+.testimonial-content {
   position: relative;
-  border-radius: 25px;
+}
+.testimonial-content h5 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.testimonial-content_quote {
+  position: absolute;
+  top: 25%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+.testimonial-rightsideContent {
+  padding: 30px 12px;
+}
+@media all and (min-width: 768px) {
+  .testimonial-rightsideContent {
+    padding: 80px 23px;
+  }
+}
+.testimonial-rightsideContent .owl-carousel .owl-nav button.owl-next, .testimonial-rightsideContent .owl-carousel .owl-nav button.owl-prev, .testimonial-rightsideContent .owl-carousel button.owl-dot {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+@media all and (max-width: 520px) {
+  .testimonial-rightsideContent .owl-carousel .owl-nav button.owl-next, .testimonial-rightsideContent .owl-carousel .owl-nav button.owl-prev, .testimonial-rightsideContent .owl-carousel button.owl-dot {
+    display: none;
+  }
+}
+.testimonial-rightsideContent .owl-carousel .owl-nav button.owl-next span, .testimonial-rightsideContent .owl-carousel .owl-nav button.owl-prev span {
+  font-size: 18px;
+}
+.testimonial-rightsideContent .owl-theme .owl-nav {
+  text-align: end;
+  position: relative;
+  top: -60px;
+  right: 64px;
+}
+.testimonial-rightsideContent .owl-theme .owl-nav [class*=owl-]:hover {
+  color: var(--primary-500);
+}
+.testimonial-sideImage {
+  height: 100%;
+}
+.testimonial-user {
+  height: 80px;
+  width: 80px;
+}
+.testimonial-user img {
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
-/* Image container and styling */
-.card-image {
+.card {
+  width: 500px;
   position: relative;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-.event-content img {
+.card-img img {
   width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Title positioned inside the image */
-.card-title {
+.card-text {
   position: absolute;
-  bottom: 30px;
-  left: 10px;
-  color: white;
-  font-size: 1.5rem;
-  padding: 5px 0px;
-  transition: all 0.3s ease; /* Smooth transition for position */
-  z-index: 1;
-}
-
-/* Initially hide description with opacity */
-.card-description {
-  position: absolute;
-  bottom: -100%;
   left: 0;
-  width: 100%;
-  color: white;
-  padding: 0px 12px;
-  opacity: 0;
-  transition: all 0.3s ease;
+  bottom: -30px;
+  padding: 20px;
+  transition: bottom 0.5s ease;
 }
 
-/* Hover effect - image zooms in */
-.event-content:hover img {
-  transform: scale(1.1);
-}
-
-/* Hover effect - title moves up */
-.event-content:hover .card-title {
-  transform: translateY(-100%); /* Move the title up */
-}
-
-/* Hover effect - description slides up and becomes visible */
-.event-content:hover .card-description {
-  opacity: 1; /* Show on hover */
-  bottom: 24px; /* Slide description up to take title's place */
+.card:hover .card-text {
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
