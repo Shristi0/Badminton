@@ -1,0 +1,175 @@
+:root {
+  --neutral-white: #fcfcfc;
+  --light-blue: #f0f8ff;
+}
+.text-neutral-white {
+  color: var(--neutral-white);
+}
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
+.fs-48 {
+  font-size: clamp(38px, calc(2.375rem + ((1vw - 3.2px) * 0.625)), 48px);
+  min-height: 0vw;
+}
+.para-main {
+  line-height: 30px;
+}
+a {
+  color: unset;
+}
+.img-aspect {
+  height: auto;
+  width: 100%;
+}
+.btn-primary {
+  background: var(--primary-500);
+  border-radius: 16px;
+  padding: 21px 12px;
+  color: var(--neutral-white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+}
+// subbanner css
+.sub-banner {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 18, 33, 0.46) 0%,
+        rgba(0, 18, 33, 0.46) 100%
+      ),
+      url(/assets/image/subbanner.png) lightgray -0.496px -0.603px / 99.948%
+        108.84% no-repeat;
+    filter: blur(2px);
+    z-index: 1;
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+    padding: 90px 0;
+    .separator {
+      height: 6px;
+      width: 6px;
+      background-color: #f28f72;
+    }
+  }
+}
+
+/* contact us */
+.contact-section {
+  .para {
+    line-height: 30px;
+  }
+  form {
+    .form-label {
+      margin-bottom: 12px;
+      color: var(--grey-darkest);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .form-control {
+      border-radius: 8px;
+      background: var(--primary-50);
+      padding: 21px 12px;
+      border: 0;
+      &::placeholder {
+        color: var(--grey-normal);
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// about-us css
+.who-we-are {
+  img {
+    border-radius: 24px;
+    aspect-ratio: 1/1;
+  }
+}
+.president-msg {
+  img {
+    border-radius: 24px;
+    aspect-ratio: 211/183;
+  }
+  .bullet {
+    border-radius: 14px;
+    background: var(--primary-500);
+    height: 6px;
+    width: 6px;
+  }
+}
+.mission-vision {
+  .card {
+    background: var(--white);
+    border: none;
+    padding: 52px 32px;
+    border-radius: 20px;
+  }
+}
+// tabs
+.global-tabs {
+  .nav {
+    border-radius: 60px;
+    background: #f2f6fa;
+    padding: 10px 24px;
+    margin-bottom: 32px;
+    .nav-link {
+      background: 0 0;
+      border: 0;
+      border-radius: 0;
+      color: var(--grey-dark);
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      &.active {
+        border-radius: 110px;
+        background: var(--primary-500);
+        color: var(--white);
+      }
+    }
+  }
+  table {
+    .profile-img {
+      border-radius: 110px;
+    }
+    tr:not(:last-child){
+      margin-bottom: 12px;
+    }
+    thead {
+      border-radius: 8px;
+      background: var(--primary-500);
+      border-radius: 8px;
+      th {
+        padding: 12px 0;
+        font-size: 14px;
+        font-size: 600;
+        color: var(--neutral-white);
+        &:first-child {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          padding-left: 24px;
+        }
+        &:last-child {
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          padding-right: 24px;
+        }
+      }
+    }
+  
+  }
+}
