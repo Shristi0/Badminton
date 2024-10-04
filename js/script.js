@@ -41,6 +41,23 @@ $(".gallery-slider").owlCarousel({
     },
   },
 });
+$(".eventsDetail-slider").owlCarousel({
+  loop: true,
+  margin: 10,
+  autoplay: false,
+  nav: false,
+  dots: false,
+  infinity: true,
+  responsive: {
+    0: {
+      items: 1.5,
+    },
+
+    1000: {
+      items: 3.5,
+    },
+  },
+});
 
 $('.partner-slider').owlCarousel({
   loop:true,
