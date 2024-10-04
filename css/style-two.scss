@@ -18,6 +18,7 @@
 .para-main {
   line-height: 30px;
 }
+
 a {
   color: unset;
 }
@@ -118,6 +119,9 @@ a {
     border: none;
     padding: 52px 32px;
     border-radius: 20px;
+    @media all and (max-width: 1200px) {
+      padding: 24px;
+    }
   }
 }
 // tabs
@@ -135,29 +139,39 @@ a {
       padding: 10px 16px;
       font-size: 14px;
       font-weight: 500;
+      border-radius: 110px;
       &.active {
-        border-radius: 110px;
         background: var(--primary-500);
         color: var(--white);
       }
     }
   }
   table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    > :not(caption) > * > * {
+      border-bottom-width: 1px !important;
+      border-top-width: 1px !important;
+      padding: 12px !important;
+    }
     .profile-img {
       border-radius: 110px;
     }
-    tr:not(:last-child){
-      margin-bottom: 12px;
+    .name-row {
+      @media all and (max-width: 1024px) {
+        width: 150px;
+      }
     }
     thead {
       border-radius: 8px;
       background: var(--primary-500);
-      border-radius: 8px;
+      border-style: unset !important;
       th {
         padding: 12px 0;
         font-size: 14px;
         font-size: 600;
         color: var(--neutral-white);
+        vertical-align: middle;
         &:first-child {
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
@@ -170,6 +184,100 @@ a {
         }
       }
     }
-  
+    tr {
+      border-width: 1px 0;
+      td {
+        vertical-align: middle;
+      }
+      td:first-child {
+        border-left-width: 1px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding-right: 12px;
+      }
+      td:last-child {
+        border-right-width: 1px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+}
+// committee-section css
+.committee-section {
+  .card {
+    padding: 20px 24px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.2),
+      0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+    border: 0;
+    img {
+      border-radius: 100%;
+    }
+  }
+}
+// download css
+.download {
+  .wrapper {
+    border-radius: 16px;
+    padding: 60px;
+    background: #f7fbff;
+    @media all and (max-width: 768px) {
+      padding: 32px;
+    }
+    .table > :not(caption) > * > * {
+      padding: 20px 16px;
+    }
+    .table tr:last-child {
+      border-bottom: none;
+      border-color: #f7fbff;
+    }
+  }
+}
+// pagination css
+.pagination {
+  gap: 11px;
+  .page-link {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    background-color: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--grey-darkest);
+  }
+  .page-item.active .page-link {
+    background: #f74f1e !important;
+    color: var(--white);
+    border: 1px solid #f74f1e;
+  }
+}
+// modal
+.notice-modal {
+  .btn-close {
+    width: 20px;
+    height: 20px;
+    background: url(/assets/icon/cross.svg);
+    background-repeat: no-repeat;
+    border: none;
+    opacity: 1;
+    padding: 0;
+  }
+  .modal-header {
+    padding: 16px 24px;
+  }
+  .modal-content {
+    border-radius: 16px;
+    border: 7px solid #ebebeb;
+    background: #fff;
+    box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.23);
+  }
+  .modal-body {
+    padding: 24px 24px 26px 24px;
+    img {
+      aspect-ratio: 487/690;
+      border-radius: 8px;
+    }
   }
 }
